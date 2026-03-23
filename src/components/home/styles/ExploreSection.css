@@ -25,6 +25,7 @@
 
 /* ── TITLE ── */
 .as-title {
+  font-family: "Boowie";
   font-size: 48px;
   font-weight: 800;
   color: #0d2c3f;
@@ -36,6 +37,7 @@
 
 /* ── SUBTITLE ── */
 .as-subtitle {
+  font-family: "Montserrat";
   font-size: 15px;
   font-weight: 400;
   color: #6b6b6b;
@@ -60,6 +62,7 @@
   background-position: left bottom;
   background-size: 0% 1.5px;
   transition: background-size 0.3s ease, gap 0.2s ease;
+  font-family: "Montserrat";
 }
 
 .as-link:hover {

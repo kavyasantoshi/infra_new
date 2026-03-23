@@ -21,6 +21,7 @@
 }
 
 .properties-heading {
+  font-family: "Boowie";
   text-align: center;
   font-size: 40px;
   font-weight: 700;
@@ -86,6 +87,7 @@
 }
 
 .badge-featured {
+  font-family: "Montserrat";
   background: #fff;
   padding: 4px 10px;
   font-size: 10px;
@@ -95,6 +97,7 @@
 }
 
 .badge-sale {
+  font-family: "Montserrat";
   background: #d4af37;
   padding: 4px 10px;
   font-size: 10px;
@@ -143,11 +146,13 @@
   flex-shrink: 0;
 }
 .property-text{
+  font-family: "Montserrat";
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
 }
 .property-info h3 {
+  font-family: "Montserrat";
   font-size: 14px;
   margin: 0;
   color: #1a3b52;
