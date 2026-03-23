@@ -73,6 +73,7 @@
 
 /* Address — right-aligned */
 .int2-address {
+  font-family: "Montserrat";
   font-style: normal;
   /* font-size: clamp(0.72rem, 1vw, 0.88rem); */
   font-size: 16px;
