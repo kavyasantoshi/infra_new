@@ -1,0 +1,225 @@
+/* ==============================
+   GITARTHA FOOTER — Fluid Layout
+   Same 3-col layout at ALL sizes,
+   scales down with clamp() & vw
+============================== */
+
+.footer {
+  width: 100%;
+  background: #0d1b26;
+  font-family: 'Montserrat', sans-serif;
+  color: #9ca3af;
+  box-sizing: border-box;
+}
+
+/* ── MAIN 3-COLUMN ROW ── */
+.footer-main {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: clamp(20px, 4vw, 40px) clamp(16px, 4vw, 40px) clamp(16px, 3vw, 32px);
+  display: grid;
+  /* Left and right take equal space, center is flexible but constrained */
+  grid-template-columns: 1fr clamp(160px, 22vw, 280px) 1fr;
+  align-items: center;
+  gap: clamp(12px, 2.5vw, 32px);
+  box-sizing: border-box;
+}
+
+/* ── LEFT — Brand ── */
+.footer-left {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.footer-logo {
+  font-size: clamp(18px, 3.5vw, 38px);
+  font-weight: 800;
+  margin: 0 0 clamp(2px, 0.5vw, 6px);
+  letter-spacing: 0.04em;
+  background: linear-gradient(135deg, #e8c96a 0%, #C9A84C 40%, #a07830 70%, #C9A84C 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  filter: drop-shadow(0 0 10px rgba(201, 168, 76, 0.22));
+  line-height: 1.1;
+  white-space: nowrap;
+}
+
+.footer-sub {
+  font-size: clamp(7px, 1vw, 10px);
+  letter-spacing: clamp(0.1em, 0.4vw, 0.22em);
+  text-transform: uppercase;
+  color: #C9A84C;
+  font-weight: 600;
+  margin: 0 0 clamp(6px, 1.2vw, 12px);
+  opacity: 0.85;
+  white-space: nowrap;
+}
+
+.footer-desc {
+  font-size: clamp(10px, 1.2vw, 13px);
+  line-height: 1.7;
+  color: #56707f;
+  margin: 0;
+  font-weight: 400;
+}
+
+/* ── CENTER — Nav + Social ── */
+.footer-center {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: clamp(8px, 1.5vw, 16px);
+}
+
+.footer-links {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 0;
+  flex-wrap: nowrap;
+}
+
+.footer-link {
+  background: none;
+  border: none;
+  color: #7a8fa0;
+  font-family: 'Montserrat', sans-serif;
+  font-size: clamp(10px, 1.2vw, 13.5px);
+  font-weight: 500;
+  cursor: pointer;
+  padding: clamp(3px, 0.5vw, 6px) clamp(6px, 1vw, 14px);
+  letter-spacing: 0.04em;
+  transition: color 0.2s;
+  position: relative;
+  white-space: nowrap;
+}
+
+.footer-link + .footer-link::before {
+  content: '·';
+  position: absolute;
+  left: -1px;
+  color: #2a3f50;
+  pointer-events: none;
+}
+
+.footer-link:hover {
+  color: #C9A84C;
+}
+
+.footer-social {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: clamp(5px, 0.8vw, 10px);
+}
+
+.social-icon {
+  width: clamp(28px, 3.2vw, 36px);
+  height: clamp(28px, 3.2vw, 36px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: clamp(5px, 0.6vw, 8px);
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  color: #7a8fa0;
+  text-decoration: none;
+  transition: color 0.2s, background 0.2s, border-color 0.2s;
+  flex-shrink: 0;
+}
+
+.social-icon svg {
+  width: clamp(12px, 1.4vw, 17px);
+  height: clamp(12px, 1.4vw, 17px);
+}
+
+.social-icon:hover {
+  color: #C9A84C;
+  background: rgba(201, 168, 76, 0.1);
+  border-color: rgba(201, 168, 76, 0.35);
+}
+
+/* ── RIGHT — Building ── */
+.footer-right {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.footer-building-svg {
+  width: clamp(120px, 18vw, 240px);
+  height: auto;
+  border-radius: clamp(6px, 0.8vw, 10px);
+  opacity: 0.9;
+  display: block;
+}
+
+/* ── COPYRIGHT ── */
+.footer-copyright {
+  border-top: 1px solid rgba(255, 255, 255, 0.07);
+  padding: clamp(10px, 1.5vw, 16px) clamp(16px, 4vw, 40px);
+  text-align: center;
+  font-size: clamp(10px, 1vw, 12px);
+  color: #3a5060;
+  letter-spacing: 0.03em;
+}
+
+/* ==============================
+   STACK + CENTER below 520px
+============================== */
+@media (max-width: 520px) {
+  .footer-main {
+    grid-template-columns: 1fr;
+    gap: 20px;
+    padding: 28px 20px 20px;
+    text-align: center;
+  }
+
+  .footer-left {
+    align-items: center;
+  }
+
+  .footer-desc {
+    font-size: 12px;
+    max-width: 280px;
+    margin: 0 auto;
+  }
+
+  .footer-sub {
+    font-size: 8px;
+    letter-spacing: 0.18em;
+  }
+
+  .footer-logo {
+    font-size: 28px;
+  }
+
+  .footer-center {
+    align-items: center;
+  }
+
+  .footer-links {
+    justify-content: center;
+  }
+
+  .footer-social {
+    justify-content: center;
+  }
+
+  .footer-right {
+    justify-content: center;
+  }
+
+  .footer-building-svg {
+    width: 160px;
+    margin: 0 auto;
+  }
+
+  .footer-copyright {
+    font-size: 10px;
+    padding: 10px 16px;
+  }
+}

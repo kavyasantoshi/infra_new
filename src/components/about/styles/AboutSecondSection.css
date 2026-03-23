@@ -1,0 +1,233 @@
+.pw-section {
+  background: #f5f0e8;
+  padding: 72px 40px 80px;
+  text-align: center;
+  overflow: hidden;
+}
+
+.pw-top {
+  max-width: 700px;
+  margin: 0 auto 48px;
+  opacity: 0;
+  transform: translateY(18px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.pw-top.pw-visible {
+  opacity: 1;
+  transform: none;
+}
+
+.pw-title {
+  font-family: 'Boowie', sans-serif;
+  font-size: 72px;
+  font-weight: normal;
+  color: #C9A84C;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  margin-bottom: 12px;
+  line-height: 1;
+}
+
+.pw-bulb {
+  width: 56px;
+  height: auto;
+  margin-bottom: 20px;
+  filter: invert(0%) sepia(0%) saturate(0%) brightness(0.3);
+  opacity: 0.6;
+}
+
+.pw-mission-heading {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 40px;
+  font-weight: 600;
+  color: #1a2535;
+  margin-bottom: 12px;
+  letter-spacing: 0.01em;
+}
+
+.pw-mission-text {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 15px;
+  line-height: 1.8;
+  color: #6b7f8e;
+  font-weight: 400;
+}
+
+.pw-cards {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: center;
+  max-width: 1100px;
+  margin: 0 auto;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.8s ease 0.15s, transform 0.8s ease 0.15s;
+}
+
+.pw-cards.pw-visible {
+  opacity: 1;
+  transform: none;
+}
+
+.pw-card {
+  flex: 1;
+  padding: 24px 32px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.pw-card-title {
+  font-family: 'Boowie', sans-serif;
+  font-size: 40px;
+  font-weight: normal;
+  color: #C9A84C;
+  letter-spacing: 0.04em;
+  margin-bottom: 16px;
+  line-height: 1;
+}
+
+.pw-card-icon {
+  width: 40px;
+  height: auto;
+  margin-bottom: 20px;
+  filter: invert(0%) sepia(0%) saturate(0%) brightness(0.3);
+  opacity: 0.55;
+}
+
+.pw-card-text {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 14px;
+  line-height: 1.75;
+  color: #5a6a78;
+  font-weight: 400;
+}
+
+.pw-divider {
+  width: 1px;
+  background: rgba(26, 37, 53, 0.15);
+  align-self: stretch;
+  margin: 24px 0;
+  flex-shrink: 0;
+}
+
+@media (max-width: 900px) {
+  .pw-section {
+    padding: 56px 24px 64px;
+  }
+
+  .pw-title {
+    font-size: 56px;
+  }
+
+  .pw-bulb {
+    width: 44px;
+  }
+
+  .pw-mission-heading {
+    font-size: 30px;
+  }
+
+  .pw-mission-text {
+    font-size: 13px;
+  }
+
+  .pw-card {
+    padding: 20px 16px;
+  }
+
+  .pw-card-title {
+    font-size: 28px;
+  }
+
+  .pw-card-icon {
+    width: 32px;
+  }
+
+  .pw-card-text {
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 600px) {
+  .pw-section {
+    padding: 44px 16px 52px;
+  }
+
+  .pw-title {
+    font-size: 40px;
+  }
+
+  .pw-bulb {
+    width: 34px;
+    margin-bottom: 14px;
+  }
+
+  .pw-mission-heading {
+    font-size: 22px;
+  }
+
+  .pw-mission-text {
+    font-size: 11.5px;
+  }
+
+  .pw-top {
+    margin-bottom: 32px;
+  }
+
+  .pw-card {
+    padding: 12px 8px;
+  }
+
+  .pw-card-title {
+    font-size: 18px;
+    margin-bottom: 10px;
+  }
+
+  .pw-card-icon {
+    width: 24px;
+    margin-bottom: 12px;
+  }
+
+  .pw-card-text {
+    font-size: 10px;
+    line-height: 1.6;
+  }
+
+  .pw-divider {
+    margin: 12px 0;
+  }
+}
+
+@media (max-width: 380px) {
+  .pw-section {
+    padding: 36px 10px 44px;
+  }
+
+  .pw-title {
+    font-size: 30px;
+  }
+
+  .pw-mission-heading {
+    font-size: 18px;
+  }
+
+  .pw-mission-text {
+    font-size: 9px;
+  }
+
+  .pw-card-title {
+    font-size: 14px;
+  }
+
+  .pw-card-icon {
+    width: 20px;
+  }
+
+  .pw-card-text {
+    font-size: 8px;
+  }
+}

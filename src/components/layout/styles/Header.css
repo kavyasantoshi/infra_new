@@ -1,0 +1,198 @@
+.nav-bar {
+  position: sticky; /* ✅ sticky */
+  top: 0;
+  width: 100%;
+  height: var(--header-height);
+  z-index: 1000;
+
+  background: #ffffff;
+  border-bottom: 1px solid #e5e7eb;
+
+  display: flex;
+  align-items: center;
+}
+
+/* CONTENT */
+.nav-content {
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  padding: 0 35px;
+  height: 100%;
+}
+
+/* LOGO */
+.logo-image {
+  max-height: 150px;
+  width: 200px;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.logo-image:hover {
+  transform: scale(1.05);
+}
+
+/* ===========================
+   NAV LINKS (DESKTOP)
+=========================== */
+
+.nav-links {
+  display: flex;
+  gap: 45px;
+  align-items: center;
+}
+
+.nav-link {
+  position: relative;
+  font-family: 'Montserrat';
+  font-size: 16px;
+  font-weight: 600;
+  color: #1f2937;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 5px 0;
+  transition: all 0.3s ease;
+}
+
+.nav-link::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -6px;
+  width: 0%;
+  height: 2px;
+  background: #D4AF37;
+  transition: width 0.3s ease;
+}
+
+.nav-link:hover::after {
+  width: 100%;
+}
+
+.nav-link:hover {
+  color: #000;
+}
+
+.nav-link.active {
+  color: #000;
+}
+
+.nav-link.active::after {
+  width: 100%;
+}
+
+.menu-toggle {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  cursor: pointer;
+}
+
+.menu-toggle span {
+  width: 25px;
+  height: 2px;
+  background: #1f2937;
+  transition: 0.3s ease;
+}
+
+/* ANIMATION */
+.menu-toggle.active span:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+
+.menu-toggle.active span:nth-child(2) {
+  opacity: 0;
+}
+
+.menu-toggle.active span:nth-child(3) {
+  transform: rotate(-45deg) translate(5px, -5px);
+}
+
+/* ===========================
+   MOBILE MENU
+=========================== */
+
+@media (max-width: 950px) {
+  .menu-toggle {
+    display: flex;
+  }
+
+  .nav-links {
+    position: absolute;
+    top: var(--header-height); /* aligns perfectly */
+    left: 0;
+    width: 100%;
+
+    flex-direction: column;
+    align-items: flex-start;
+
+    background: #ffffff;
+    display: none;
+    gap: 0px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+    border-top: 1px solid #e5e7eb;
+
+    animation: slideDown 0.3s ease;
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+
+  .nav-link {
+    width: 100%;
+    padding: 24px 25px;
+    font-size: 15px;
+    border-bottom: 1px solid #f1f1f1;
+  }
+
+  .nav-link:last-child {
+    border-bottom: none;
+  }
+
+  .nav-link:hover {
+    background: #f9fafb;
+  }
+
+  .nav-link::after {
+    display: none;
+  }
+}
+
+/* ===========================
+   SMALL DEVICES
+=========================== */
+
+@media (max-width: 500px) {
+  .nav-content {
+    padding: 0 20px;
+  }
+
+  .logo-image {
+    width: 130px;
+  }
+}
+
+
+
+/* ===========================
+   ANIMATION
+=========================== */
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
