@@ -167,9 +167,31 @@
   letter-spacing: 0.03em;
 }
 
-/* ==============================
-   STACK + CENTER below 520px
-============================== */
+.footer-logo-box {
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.95),
+    rgba(245, 245, 245, 0.9)
+  );
+  padding: clamp(8px, 1vw, 12px) clamp(12px, 1.5vw, 18px);
+  border-radius: clamp(6px, 0.8vw, 10px);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 
+    0 4px 12px rgba(0,0,0,0.2),
+    0 0 0 1px rgba(255,255,255,0.2) inset;
+
+  margin-bottom: clamp(6px, 1vw, 12px);
+}
+
+.footer-logo-img {
+  width: clamp(120px, 12vw, 180px);
+  height: auto;
+  object-fit: contain;
+  display: block;
+}
+
 @media (max-width: 520px) {
   .footer-main {
     grid-template-columns: 1fr;
